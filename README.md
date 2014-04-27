@@ -15,7 +15,7 @@ process.
 Installation
 ------------
 
-Run Composer.
+Install and run ```composer.phar install```
 
 
 Configuration
@@ -35,4 +35,4 @@ Browse to http://api.myhostalias.com:8080 and use the buttons to test each servi
 Maintenance
 -----------
 
-Whenever you want to test Providers update this repo.  The ```config/autoload/global.php``` contains an array of Providers.  As new Providers are added to league/oauth2-client they are added to this array.  The process of running tests is clicking the button for each Provider and if a new provider has been added since your last run you will be notified you are missing that configuration.
+Whenever you want to test Providers update this repo and run ```composer.phar update```.  The ```config/autoload/global.php``` contains an array of Providers.  As new Providers are added to league/oauth2-client they are added to this array.  The process of running tests is clicking the button for each Provider and if a new provider has been added since your last run you will be notified you are missing that configuration.
