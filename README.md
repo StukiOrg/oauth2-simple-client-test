@@ -1,4 +1,4 @@
-OAuth2 Client Provider Test for [league/oauth2-client](https://github.com/thephpleague/oauth2-client)
+OAuth2 Client Provider Testing for [league/oauth2-client](https://github.com/thephpleague/oauth2-client)
 ====================================================
 
 Introduction
