@@ -1,9 +1,11 @@
 <div class="jumbotron">
     <h1>OAuth2 Client Provider Test</h1>
-    <p>
-        This tool tests the provider for league/oauth2-client.  You may click on a provider 
-        to run it's OAuth2 process.
-    </p>
+    <h2><?= $provider; ?></h2>
+
+    <?php if ($valid) { ?>
+        <p class="alert alert-success">PASSED</p>
+        <pre><?= print_r($token, true); ?></pre>
+    <?php } ?>
 
     <p>
         <?php foreach ($providers as $provider) { ?>

@@ -12,5 +12,14 @@
  */
 
 return array(
-    // ...
+    'providers' => [
+        'Eventbrite', 
+        'Facebook', 
+        'Github', 
+        'Google',
+        'Instagram', 
+        'LinkedIn', 
+        'Microsoft', 
+        'Vkontakte'
+    ]
 );

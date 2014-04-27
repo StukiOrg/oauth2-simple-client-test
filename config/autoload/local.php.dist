@@ -11,5 +11,47 @@
  * credentials from accidentally being committed into version control.
  */
 
-return array(
-);
+return [
+    'oauth2' => [
+        'Eventbrite' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+        'Facebook' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+        'Github' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+        'Google' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+        'Instagram' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+        'LinkedIn' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+        'Microsoft' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+        'Vkontakte' => [
+            'clientId' => '',
+            'clientSecret' => '',
+            'redirectUri' => '',
+        ],
+    ],
+];
