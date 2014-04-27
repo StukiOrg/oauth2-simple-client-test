@@ -60,6 +60,8 @@ class IndexController extends AbstractActionController
             $valid = true;
         }
 
+        unset($container->lastProvider);
+
         return [
             'valid' => $valid, 
             'provider' => $provider,
