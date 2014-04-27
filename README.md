@@ -12,10 +12,16 @@ walked-through.  This app walks through each provider in turn and runs the oauth
 process.
 
 
+Installation
+------------
+
+Run Composer.
+
+
 Configuration
 -------------
 
-Run Composer.  Copy ```config/autoload/local.php.dist``` to ```config/autoload/local.php``` Next create an application for yourself on every provider and/or add every providers clientId and clientSecret and redirectUri to your local.php.  You should configure each Provider's redirectUri to an alias in your hosts file, and to a specific port such as 8080. 
+Copy ```config/autoload/local.php.dist``` to ```config/autoload/local.php``` Next create an application for yourself on every provider and/or add every providers clientId and clientSecret and redirectUri to your local.php.  You should configure each Provider's redirectUri to an alias in your hosts file, and to a specific port such as 8080. 
 
 
 Testing
