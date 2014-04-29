@@ -7,6 +7,12 @@
     ],
     "minimum-stability": "dev",
     "homepage": "http://github.com/thephpleague",
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:TomHAnderson/oauth2-client"
+    }
+    ],
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*",

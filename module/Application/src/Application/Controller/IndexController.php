@@ -53,7 +53,12 @@ class IndexController extends AbstractActionController
         $oauth2Config = $config['oauth2'][$provider];
         $oauth2 = new $class($oauth2Config);
 
-        $t = $oauth2->getAccessToken('authorization_code', array('code' => $_GET['code']));
+        $state = (isset($_GET['state'])) ? $_GET['state']: null;
+
+        $t = $oauth2->getAccessToken('authorization_code', array(
+            'code' => $_GET['code'],
+            'state' => $state
+        ));
 
         $valid = false;
         if ($t instanceOf \League\OAuth2\Client\Token\AccessToken) {
