@@ -39,7 +39,12 @@ class IndexController extends AbstractActionController
         $oauth2 = new $class($oauth2Config);
         $container->lastProvider = $provider;
 
-        return $this->plugin('redirect')->toUrl($oauth2->getAuthorizationUrl());
+        $options = [];
+        if ($oauth2->getSupportState()) {
+            $options['state'] = $_SESSION['state'] = md5(rand());
+        }
+
+        return $this->plugin('redirect')->toUrl($oauth2->getAuthorizationUrl($options));
     }
 
     public function callbackAction()
@@ -55,9 +60,16 @@ class IndexController extends AbstractActionController
 
         $state = (isset($_GET['state'])) ? $_GET['state']: null;
 
+        if ($oauth2->getSupportState() and !$state) {
+            die ('state supported but not returned');
+        }
+
+        if ($oauth2->getRequireState() and !$state) {
+            die ('state required but not returned');
+        }
+
         $t = $oauth2->getAccessToken('authorization_code', array(
             'code' => $_GET['code'],
-            'state' => $state
         ));
 
         $valid = false;
