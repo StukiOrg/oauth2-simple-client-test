@@ -1,10 +1,10 @@
-OAuth2 Client Provider Testing for [league/oauth2-client](https://github.com/thephpleague/oauth2-client)
+OAuth2 Client Provider Testing for [stuki/oauth2-simple-client](https://github.com/StukiOrg/oauth2-simple-client)
 ====================================================
 
 Introduction
 ------------
 OAuth2 implementations on smaller providers have a tendancy to change, thereby 
-breaking libraries like oauth2-client, often times because routes change, but 
+breaking libraries like oauth2-simple-client, often times because routes change, but 
 for any number of reasons.
 
 So, in order to properly test each provider the whole OAuth2 process must be manually
@@ -35,6 +35,6 @@ Browse to http://api.myhostalias.com:8080 and use the buttons to test each servi
 Maintenance
 -----------
 
-Whenever you want to test Providers update this repo and run ```composer.phar update```.  The ```config/autoload/global.php``` contains an array of Providers.  As new Providers are added to [league/oauth2-client](https://github.com/thephpleague/oauth2-client)
+Whenever you want to test Providers update this repo and run ```composer.phar update```.  The ```config/autoload/global.php``` contains an array of Providers.  As new Providers are added to [stuki/oauth2-simple-client](https://github.com/StukiOrg/oauth2-simple-client)
 they are added to this array.  The process of running tests is clicking the button for each Provider and if a new provider has been added since your last run you will be notified you are missing that configuration.
 
