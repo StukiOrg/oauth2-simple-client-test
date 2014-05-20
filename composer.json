@@ -1,21 +1,15 @@
 {
-    "name": "leageue/oauth2-client-provider-test",
-    "description": "A testing framework for oauth2-client providers",
+    "name": "stuki/oauth2-simple-provider-test",
+    "description": "A testing framework for stuki/oauth2-simple-client providers",
     "license": "MIT",
     "keywords": [
         "oauth2"
     ],
     "minimum-stability": "dev",
-    "homepage": "http://github.com/thephpleague",
-    "repositories": [
-    {
-        "type": "vcs",
-        "url": "git@github.com:TomHAnderson/oauth2-client"
-    }
-    ],
+    "homepage": "http://github.com/StukiOrg",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*",
-        "league/oauth2-client": "dev-master"
+        "stuki/oauth2-simple-client": "dev-master"
     }
 }

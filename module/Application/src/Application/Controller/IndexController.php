@@ -35,12 +35,12 @@ class IndexController extends AbstractActionController
             $oauth2Config = $config['oauth2'][$provider];
         }
 
-        $class = "League\\OAuth2\\Client\\Provider\\$provider";
+        $class = "Stuki\\OAuth2\\Client\\Provider\\$provider";
         $oauth2 = new $class($oauth2Config);
         $container->lastProvider = $provider;
 
         $options = [];
-        if ($oauth2->getSupportState()) {
+        if ($oauth2->getRequireState()) {
             $options['state'] = $_SESSION['state'] = md5(rand());
         }
 
@@ -54,13 +54,13 @@ class IndexController extends AbstractActionController
 
         $provider = $container->lastProvider;
 
-        $class = "League\\OAuth2\\Client\\Provider\\$provider";
+        $class = "Stuki\\OAuth2\\Client\\Provider\\$provider";
         $oauth2Config = $config['oauth2'][$provider];
         $oauth2 = new $class($oauth2Config);
 
         $state = (isset($_GET['state'])) ? $_GET['state']: null;
 
-        if ($oauth2->getSupportState() and !$state) {
+        if ($oauth2->getRequireState() and !$state) {
             die ('state supported but not returned');
         }
 
@@ -73,7 +73,7 @@ class IndexController extends AbstractActionController
         ));
 
         $valid = false;
-        if ($t instanceOf \League\OAuth2\Client\Token\AccessToken) {
+        if ($t instanceOf \Stuki\OAuth2\Client\Token\AccessToken) {
             $valid = true;
         }
 

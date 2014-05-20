@@ -13,6 +13,7 @@
 
 return array(
     'providers' => [
+	'Box',
         'Eventbrite', 
         'Facebook', 
         'Github', 
